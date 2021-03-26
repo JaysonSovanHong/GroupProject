@@ -5,7 +5,7 @@ document.getElementById("allBook").addEventListener("click", function() {
 let data = []
 
 function fetchFunc() {
-    fetch('http://myapi-profstream.herokuapp.com/api/8debf4/books')
+    fetch('http://myapi-profstream.herokuapp.com/api/5e06aa/books')
         .then(response => response.json())
         .then(data => {
             const container = document.querySelector('#viewArea');
@@ -16,7 +16,7 @@ function fetchFunc() {
         });
 
 
-let data = []
+
 
 
 
