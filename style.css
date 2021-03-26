@@ -1,3 +1,4 @@
+<<<<<< SovanHong1
 body {
     display: flex;
     align-items: center;
@@ -63,4 +64,8 @@ button {
     0% {
         transform: translate(-30vw);
     }
+
+.hidden {
+    display:none;
+
 }
