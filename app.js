@@ -10,7 +10,7 @@ document.getElementById("allBook").addEventListener("click", function(){
 let data = []
 
 function fetchFunc() {
-fetch('http://myapi-profstream.herokuapp.com/api/4d2cc9/books') 
+fetch('http://myapi-profstream.herokuapp.com/api/8debf4/books') 
     .then(response => response.json())
     .then(data => 
         {const container = document.querySelector('#viewArea');
@@ -51,13 +51,16 @@ function printBook(x) {
     var textnode3 = document.createTextNode(x.release_date)
     bookRelease.appendChild(textnode3);
 
-    // var bookImage = document.createElement('img');
-    // var textnode3 = document.createTextNode(x.release_date)
-    // bookRelease.appendChild(textnode3);
+    var bookImage = document.createElement('img');
+    bookImage.src = x.image
+    
+    
 
     document.getElementById('viewArea').appendChild(bookTitle);
     document.getElementById('viewArea').appendChild(bookAuthor);
     document.getElementById('viewArea').appendChild(bookRelease);
+    document.getElementById('viewArea').appendChild(bookImage);
+
     console.log(bookTitle)
     console.log(bookAuthor)
     console.log(bookRelease)
@@ -76,7 +79,7 @@ function removeAllChildNodes(parent){
  function clickBook(bookId){
         document.getElementById(bookId).addEventListener("click", function(){
             // console.log(bookId);
-            fetch('http://myapi-profstream.herokuapp.com/api/4d2cc9/books/' + bookId) 
+            fetch('http://myapi-profstream.herokuapp.com/api/8debf4/books/' + bookId) 
                 .then(response => response.json())
                 .then(data => printBook(data))
         })
