@@ -1,13 +1,13 @@
 // let arr = []
-let booksId = null
+// let booksId = null
     // const all = document.querySelector('.all')
     // const index = document.querySelector('#test')
 
-fetch('http://myapi-profstream.herokuapp.com/api/5e06aa/books')
-    .then(response => response.json())
-    .then(data => console.log(sumbitBook()));
-
-
+// fetch('http://myapi-profstream.herokuapp.com/api/5e06aa/books')
+//     .then(response => response.json())
+//     .then(data => console.log(sumbitBook()));
+// let data = []
+let fetchUrl = url('http://myapi-profstream.herokuapp.com/api/05b3e0/books')
 //title
 //author
 //Release Date
@@ -35,9 +35,9 @@ document.querySelector('#newBook').addEventListener('submit', async(event) => {
 
     fetch('http://myapi-profstream.herokuapp.com/api/5e06aa/books')
         .then(response => response.json())
-        .then(data => console.log(data));
+        .then(data => sumbitBook(data));
 
-        //sumbitBook()
+       
 
 })
 
