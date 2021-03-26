@@ -1,13 +1,13 @@
 // let arr = []
-let booksId = null
+// let booksId = null
     // const all = document.querySelector('.all')
     // const index = document.querySelector('#test')
 
-fetch('http://myapi-profstream.herokuapp.com/api/124d70/books')
-    .then(response => response.json())
-    .then(data => console.log(data));
-
-
+// fetch('http://myapi-profstream.herokuapp.com/api/5e06aa/books')
+//     .then(response => response.json())
+//     .then(data => console.log(sumbitBook()));
+// let data = []
+let fetchUrl = url('http://myapi-profstream.herokuapp.com/api/05b3e0/books')
 //title
 //author
 //Release Date
@@ -20,11 +20,11 @@ document.querySelector('#newBook').addEventListener('submit', async(event) => {
 
     const release_date = "2070"
     const image = 'cool picture'
-    form
+    
 
     const body = JSON.stringify({ title, author, release_date, image })
 
-    const res = await fetch("http://myapi-profstream.herokuapp.com/api/124d70/books", {
+    const res = await fetch("http://myapi-profstream.herokuapp.com/api/5e06aa/books", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -33,34 +33,91 @@ document.querySelector('#newBook').addEventListener('submit', async(event) => {
     })
     const data = await res.json()
 
-    fetch('http://myapi-profstream.herokuapp.com/api/124d70/books')
+    fetch('http://myapi-profstream.herokuapp.com/api/5e06aa/books')
         .then(response => response.json())
-        .then(data => console.log(data));
+        .then(data => sumbitBook(data));
+
+       
 
 })
 
-document.querySelector('#deleteBook').addEventListener('click', async() => {
-    await fetch(`http://myapi-profstream.herokuapp.com/api/124d70/books/${booksId}`, { method: 'DELETE' })
-})
+ 
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 
 
 
-// let books = async() => {
-//     let getBook = await fetch("http://myapi-profstream.herokuapp.com/api/124d70/books")
-//     let data = await getBook.json()
-//     for(let i = 0; i < data.length; i++){
-//         console.log(data[i].title)
-//         arr.push(data[i].title)
+function sumbitBook(x){
+    const container = document.querySelector('#viewArea');
+    removeAllChildNodes(container);
+    console.log('test')
 
-//     }
-//     console.log(data)
-//     let text = arr.join(' ')
-//     index.innerText = text;
 
-// }
-// books()
 
-// all.addEventListener('click', () => {
-//     index.innerHTML = books().then(data => console.log(data))
+    var bookTitle = document.createElement('p');
+        var textnode = document.createTextNode(x.title)
+        bookTitle.appendChild(textnode);
+
+        var bookAuthor = document.createElement('p');
+        var textnode2 = document.createTextNode(x.author)
+        bookAuthor.appendChild(textnode2);
+
+        var bookRelease = document.createElement('p');
+        var textnode3 = document.createTextNode(x.release_date)
+        bookRelease.appendChild(textnode3);
+
+        var bookImage = document.createElement('img');
+        bookImage.src = x.image
+
+
+
+
+
+        document.getElementById('viewArea').appendChild(bookTitle);
+        document.getElementById('viewArea').appendChild(bookAuthor);
+        document.getElementById('viewArea').appendChild(bookRelease);
+        document.getElementById('viewArea').appendChild(bookImage);
+
+        console.log(bookTitle)
+        console.log(bookAuthor)
+        console.log(bookRelease)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.querySelector('#deleteBook').addEventListener('click', async() => {
+//     await fetch(`http://myapi-profstream.herokuapp.com/api/124d70/books/${booksId}`, { method: 'DELETE' })
 // })
+
+
+
+
