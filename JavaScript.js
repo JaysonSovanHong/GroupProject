@@ -1,7 +1,7 @@
 // let arr = []
 let booksId = null
-// const all = document.querySelector('.all')
-// const index = document.querySelector('#test')
+    // const all = document.querySelector('.all')
+    // const index = document.querySelector('#test')
 
 fetch('http://myapi-profstream.herokuapp.com/api/124d70/books')
     .then(response => response.json())
@@ -12,16 +12,17 @@ fetch('http://myapi-profstream.herokuapp.com/api/124d70/books')
 //author
 //Release Date
 
-document.querySelector('#newBook').addEventListener('submit', async (event) => {
+document.querySelector('#newBook').addEventListener('submit', async(event) => {
     event.preventDefault();
 
     const title = document.querySelector('#newTitle').value
-    const author =  document.querySelector('#newAuthor').value
+    const author = document.querySelector('#newAuthor').value
 
     const release_date = "2070"
     const image = 'cool picture'
+    form
 
-    const body = JSON.stringify({ title, author, release_date, image})
+    const body = JSON.stringify({ title, author, release_date, image })
 
     const res = await fetch("http://myapi-profstream.herokuapp.com/api/124d70/books", {
         method: 'POST',
@@ -33,13 +34,13 @@ document.querySelector('#newBook').addEventListener('submit', async (event) => {
     const data = await res.json()
 
     fetch('http://myapi-profstream.herokuapp.com/api/124d70/books')
-    .then(response => response.json())
-    .then(data => console.log(data));
+        .then(response => response.json())
+        .then(data => console.log(data));
 
 })
 
-document.querySelector('#deleteBook').addEventListener('click', async () => {
-    await fetch (`http://myapi-profstream.herokuapp.com/api/124d70/books/${booksId}`, {method: 'DELETE'})
+document.querySelector('#deleteBook').addEventListener('click', async() => {
+    await fetch(`http://myapi-profstream.herokuapp.com/api/124d70/books/${booksId}`, { method: 'DELETE' })
 })
 
 
@@ -51,7 +52,7 @@ document.querySelector('#deleteBook').addEventListener('click', async () => {
 //     for(let i = 0; i < data.length; i++){
 //         console.log(data[i].title)
 //         arr.push(data[i].title)
-        
+
 //     }
 //     console.log(data)
 //     let text = arr.join(' ')
@@ -63,5 +64,3 @@ document.querySelector('#deleteBook').addEventListener('click', async () => {
 // all.addEventListener('click', () => {
 //     index.innerHTML = books().then(data => console.log(data))
 // })
-
-

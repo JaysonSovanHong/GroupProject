@@ -15,27 +15,35 @@
 <body>
     <div class="container">
         <nav>
-            <button class="all"> All Books</button>
-            <button class="create">New Books</button>
+            <button id="allBook"> All Books</button>
+            <button id=" newBook ">New Books</button>
         </nav>
-    </div>
-    <span class="index">Info</span>
 
+        <form id="newBook allBook " class="all hidden">
+            <label for="newTitle ">Title:</label>
+            <input type='text' id="newTitle ">
 
-    <div class="backgroundBookShelf">
-        <img class="left" src="./image/Screen Shot 2021-03-25 at 4.27.34 PM.png">
-        <img class="right" src="./image/Screen Shot 2021-03-25 at 4.29.01 PM.png">
-        <img class="left" src="./image/Screen Shot 2021-03-25 at 4.28.49 PM.png">
-        <img class="right" src="./image/Screen Shot 2021-03-25 at 4.28.35 PM.png">
-        <img class="left" src="./image/Screen Shot 2021-03-25 at 4.28.21 PM.png">
-        <img class="right" src="./image/Screen Shot 2021-03-25 at 4.28.03 PM.png">
-        <img class="left" src="./image/Screen Shot 2021-03-25 at 4.29.13 PM.png">
-    </div>
-    <div>
+            <label for="newAuthor ">Author:</label>
+            <input type='text' id="newAuthor ">
 
+            <button id="submitNewBook ">Publish!</button>
+        </form>
     </div>
 
-    <script src="./app.js"></script>
+    <div id="viewArea"></div>
+
+    <div class="backgroundBookShelf ">
+        <img class="left " src="./image/Screen Shot 2021-03-25 at 4.27.34 PM.png ">
+        <img class="right " src="./image/Screen Shot 2021-03-25 at 4.29.01 PM.png ">
+        <img class="left " src="./image/Screen Shot 2021-03-25 at 4.28.49 PM.png ">
+        <img class="right " src="./image/Screen Shot 2021-03-25 at 4.28.35 PM.png ">
+        <img class="left " src="./image/Screen Shot 2021-03-25 at 4.28.21 PM.png ">
+        <img class="right " src="./image/Screen Shot 2021-03-25 at 4.28.03 PM.png ">
+        <img class="left " src="./image/Screen Shot 2021-03-25 at 4.29.13 PM.png ">
+    </div>
+
+    <script src="./app.js "></script>
+    <script src="./JavaScript.js "></script>
 </body>
 
 </html>
