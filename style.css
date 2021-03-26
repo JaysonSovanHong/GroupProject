@@ -1,3 +1,71 @@
+<<<<<< SovanHong1
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+nav {
+    background-color: lightgrey;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+}
+
+button {
+    background-color: transparent;
+    font-family: "Montserrat Alternates", sans-serif;
+    border-radius: 15px;
+    padding: 5px 15px;
+    border-color: lightgrey;
+}
+
+.backgroundBookShelf {
+    width: 500px;
+    height: 700px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.left {
+    animation: 50s linear 0s infinite normal none running toleft;
+}
+
+.right {
+    animation: 50s linear 0s infinite normal none running toright;
+}
+
+@keyframes toleft {
+    0% {
+        transform: translate(0vw);
+    }
+    100% {
+        transform: translate(-30vw);
+    }
+    0% {
+        transform: translate(0vw);
+    }
+}
+
+@keyframes toright {
+    0% {
+        transform: translate(-30vw);
+    }
+    100% {
+        transform: translate(0vw);
+    }
+    0% {
+        transform: translate(-30vw);
+    }
+
 .hidden {
     display:none;
+
 }
