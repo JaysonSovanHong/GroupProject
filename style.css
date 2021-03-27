@@ -1,3 +1,4 @@
+<<<<<< SovanHong1
 body {
     display: flex;
     align-items: center;
@@ -31,14 +32,6 @@ button {
     border-image: initial;
     overflow: hidden;
     border-radius: 20px;
-    z-index: -1;
-    border: none;
-}
-
-.img1 {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
 }
 
 .left {
@@ -71,34 +64,8 @@ button {
     0% {
         transform: translate(-30vw);
     }
-}
 
 .hidden {
-    display: none;
-}
+    display:none;
 
-#viewArea {
-    background-color: bisque;
-    width: 300px;
-    height: 400px;
-    position: absolute;
-    text-align: center;
-    opacity: .85;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-#viewArea:hover {
-    box-shadow: 5px 10px #888888;
-    margin-top: 3px;
-}
-
-#viewArea img {
-    padding: 5%;
-    height: 60%;
-    width: 60%;
-}
-
-.container {
-    margin-bottom: 10px;
 }
