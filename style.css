@@ -43,7 +43,6 @@ input[type=text],
 .backgroundBookShelf {
     width: 500px;
     height: 600px;
-    border-width: 1px;
     border-style: solid;
     border-color: initial;
     border-image: initial;
@@ -103,7 +102,7 @@ input[type=text],
     text-align: center;
     opacity: 1;
     border-radius: 10px;
-    margin-top: 75px;
+    margin-top: 100px;
 }
 
 .loading {
@@ -125,9 +124,9 @@ input[type=text],
 }
 
 #viewArea:hover {
-    box-shadow: 5px 10px #888888;
-    margin-top: 1px;
+    box-shadow: 5px 5px 5px 5px #888888;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 #viewArea img {
