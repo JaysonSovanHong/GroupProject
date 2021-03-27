@@ -1,4 +1,4 @@
-let url = 'http://myapi-profstream.herokuapp.com/api/db4401/books'
+let url = 'http://myapi-profstream.herokuapp.com/api/1771c6/books'
 
 
 
@@ -8,8 +8,8 @@ document.querySelector('#newBooks').addEventListener('submit', async(event) => {
     const title = document.querySelector('#newTitle').value
     const author = document.querySelector('#newAuthor').value
 
-    const release_date = "2070"
-    const image = 'cool picture'
+    const release_date = "2021"
+    const image = '/Users/savan/Documents/GAHomework/GroupProject/image/BookCover.png'
 
 
     const body = JSON.stringify({ title, author, release_date, image })
@@ -23,8 +23,6 @@ document.querySelector('#newBooks').addEventListener('submit', async(event) => {
     })
     const data = await res.json()
     printBook(data)
-    
+
 
 })
-
-
