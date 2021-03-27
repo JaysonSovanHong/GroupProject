@@ -1,4 +1,4 @@
-let url = 'http://myapi-profstream.herokuapp.com/api/3d7b40/books'
+let url = 'http://myapi-profstream.herokuapp.com/api/db4401/books'
 
 
 
@@ -22,12 +22,9 @@ document.querySelector('#newBooks').addEventListener('submit', async(event) => {
         body
     })
     const data = await res.json()
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => (data));
-
-
-
+    printBook(data)
+    
 
 })
+
+
