@@ -7,7 +7,7 @@ let data = []
 
 
 function fetchFunc() {
-fetch('http://myapi-profstream.herokuapp.com/api/8debf4/books') 
+fetch('http://myapi-profstream.herokuapp.com/api/94adb7/books') 
     .then(response => response.json())
     .then(data => 
         {const container = document.querySelector('#viewArea');
@@ -85,7 +85,9 @@ function removeAllChildNodes(parent){
 
  function clickBook(bookId){
         document.getElementById(bookId).addEventListener("click", function(){
-                fetch('http://myapi-profstream.herokuapp.com/api/8debf4/books/' + bookId) 
+                fetch('http://myapi-profstream.herokuapp.com/api/94adb7/books/' + bookId) 
                 .then(response => response.json())
                 .then(data => printBook(data))
         })
+ }
+}
