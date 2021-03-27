@@ -1,8 +1,8 @@
+let url = 'http://myapi-profstream.herokuapp.com/api/3d7b40/books'
 
-let fetchUrl = url('http://myapi-profstream.herokuapp.com/api/05b3e0/books')
 
 
-document.querySelector('#newBook').addEventListener('submit', async(event) => {
+document.querySelector('#newBooks').addEventListener('submit', async(event) => {
     event.preventDefault();
 
     const title = document.querySelector('#newTitle').value
@@ -10,11 +10,11 @@ document.querySelector('#newBook').addEventListener('submit', async(event) => {
 
     const release_date = "2070"
     const image = 'cool picture'
-    
+
 
     const body = JSON.stringify({ title, author, release_date, image })
 
-    const res = await fetch("http://myapi-profstream.herokuapp.com/api/5e06aa/books", {
+    const res = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -23,12 +23,11 @@ document.querySelector('#newBook').addEventListener('submit', async(event) => {
     })
     const data = await res.json()
 
-    fetch('http://myapi-profstream.herokuapp.com/api/5e06aa/books')
+    fetch(url)
         .then(response => response.json())
         .then(data => (data));
 
-       
+
+
 
 })
-
- 
