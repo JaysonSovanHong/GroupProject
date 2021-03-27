@@ -15,8 +15,8 @@
 <body>
     <div class="container">
         <nav>
-            <button id="allBook"> All Books</button>
-            <button id=" newBook ">New Books</button>
+            <button class='load' id="allBook"> All Books</button>
+            <button class="move" id="newBook">Create Books</button>
         </nav>
 
         <form id="newBook" class="all">
@@ -26,11 +26,12 @@
             <label for="newAuthor">Author:</label>
             <input type='text' id="newAuthor">
 
-            <button id="submitNewBook">Publish!</button>
+            <button class="sovan" id="submitNewBook">Publish!</button>
         </form>
     </div>
 
     <div id="viewArea"></div>
+    <div class="loading hidden"><img src="https://cdn.dribbble.com/users/1158489/screenshots/4143687/gama_.gif"> </div>
 
     <div class="backgroundBookShelf ">
         <img class="left " src="./image/Screen Shot 2021-03-25 at 4.27.34 PM.png ">
@@ -42,8 +43,8 @@
         <img class="left " src="./image/Screen Shot 2021-03-25 at 4.29.13 PM.png ">
     </div>
 
-    <script src="./app.js "></script>
-    <script src="./JavaScript.js "></script>
+    <script src="./app.js"></script>
+    <script src="./JavaScript.js"></script>
 </body>
 
 </html>
